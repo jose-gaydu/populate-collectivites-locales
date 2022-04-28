@@ -1,36 +1,38 @@
-Populate
+Populate Collectivites Locales
 =====
 
-We have all used them, `<select>` elements that are populated by selecting the value of another `<select>`.
-I found myself writing this logic over and over again, so I decided to put together this small jQuery plugin as abstraction.
+Ceci est un project forker de ma personne, je suis josé Gaydu, developpeur javascript et je vais utilisé cette librairie dans un projet de Collectivites Locales en guadeloupe ma région d'origine.
 
-More info, demos, documentation and unit tests at: http://github.e-sites.nl/populate/
+Je vais modifier cette librairie rapidement.
+
+Nous les avons tous utilisés, des éléments `<select>` qui sont remplis en sélectionnant la valeur d'un autre `<select>`.
+Je me suis retrouvé à écrire cette logique encore et encore, alors j'ai décidé de mettre en place ce petit plugin jQuery en tant qu'abstraction.
 
 ## Options
-Populate accepts two arguments. The actual data that needs to be injected into the DOM and optionally an object with options.</p>
+Populate accepte deux arguments. Les données réelles qui doivent être injectées dans le DOM et éventuellement un objet avec des options.</p>
 <table class="table">
 	<thead>
 		<tr>
-			<th>Property</th>
+			<th>Proprieté</th>
 			<th>Type</th>
 			<th>Description</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>exclude</td>
+			<td>exclure</td>
 			<td><code>{string}</code></td>
-			<td>Exclude <code>&lt;option&gt;</code> nodes from being removed, e.g. the first node which could act as placeholder.</td>
+			<td>Le premier nœud qui pourrait servir d'espace réservé.</td>
 		</tr>
 		<tr>
 			<td>select</td>
 			<td><code>{string}</code></td>
-			<td>Select an <code>&lt;option&gt;</code> node after populating the <code>&lt;select&gt;</code> element. This property will also accept a valid jQuery selector like <code>:first:</code> or <code>:eq(1)</code>.</td>
+			<td>Selection d'options.</td>
 		</tr>
 		<tr>
 			<td>onPopulate</td>
 			<td><code>{object}</code></td>
-			<td>Callback that will be dispatched after populating the <code>&lt;select&gt;</code> element. The first argument will be an array with the actual option nodes, this means that you could easily write some logic to handle an empty result set. Also, the <code>this</code> context refers to the actual <code>&lt;select&gt;</code> element that is being populated.</td>
+			<td>lorem ipsum</td>
 		</tr>
 	</tbody>
 </table>
@@ -44,7 +46,7 @@ $('#selector').populate({key:value} , {
 ```
 
 ## Implementation
-First and foremost, include the plugin as such:
+Tout d'abord, incluez le plugin en tant que tel :
 
 ```html
 <script src="jquery-1.9.0.min.js"></script>
@@ -67,13 +69,15 @@ Prep your HTML markup:
 </select>
 ```
 
-Initiate the plugin like this:
+Lancez le plugin comme ceci :
+
 ```js
-// You most likely want to encapsulate the logic within an event handler
-// or in a callback after fetching data from the server
+
+// Vous souhaitez probablement encapsuler la logique dans un gestionnaire d'événements
+// ou dans un rappel après avoir récupéré les données du serveur
 $('#categories').on('change', function () {
     $('#subcategories').populate({key: value});
 });
 ```
 
-More info, demos, documentation and unit tests at: http://github.e-sites.nl/populate/
+Plus d'infos, démos, documentation et tests unitaires sur: http://github.e-sites.nl/populate/
